@@ -19,7 +19,7 @@ public class App {
         post("/squads/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             String name = request.queryParams("squadName");
-
+            String cause = request.queryParams("cause");
         });
     }
 }
