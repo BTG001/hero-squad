@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Queue;
 
 public class Squad {
@@ -24,6 +25,10 @@ public class Squad {
 
     public static void clear() {
         instances.clear();
+    }
+
+    public static ArrayList<Squad> getAll() {
+        return instances;
     }
 
     public int getSize() {

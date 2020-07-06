@@ -38,4 +38,12 @@ public class SquadTest {
         Squad squad = new Squad(7,"Justice League", "Safeguard People");
         assertEquals(1, squad.getId());
     }
+
+    @Test
+    public void allSquadsContainSquads() {
+        Squad group1 = new Squad(7,"Justice League", "Safeguard People");
+        Squad group2 = new Squad(5, "Wakanda Forever", "Protecting Wakanda");
+        assertEquals(true, Squad.getAll().contains(group1));
+        assertEquals(true, Squad.getAll().contains(group2));
+    }
 }
