@@ -28,4 +28,8 @@ public class SquadTest {
         Squad squad = new Squad(7,"Justice League", "Safeguard People");
         assertEquals("Safeguard People", squad.getCause());
     }
+    @After
+    public void tearDown() {
+        Squad.clear();
+    }
 }
