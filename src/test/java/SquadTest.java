@@ -10,4 +10,10 @@ public class SquadTest {
         Squad squad = new Squad(7,"Justice League", "Safeguard People");
         assertEquals(true, squad instanceof Squad);
     }
+
+    @Test
+    public void getsSize() {
+        Squad squad = new Squad(7,"Justice League", "Safeguard People");
+        assertEquals(7, squad.getSize());
+    }
 }
