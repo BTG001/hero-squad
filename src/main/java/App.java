@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import spark.ModelAndView;
@@ -24,6 +25,26 @@ public class App {
             Squad newSquad = new Squad(size,name, cause);
             model.put("squads", Squad.getAll());
             return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/receivedsquad", (req, res) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Squad> squads = Squad.getAll();
+            model.put("squads", squads);
+            return new ModelAndView(model, "display.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/herosform/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "heroform-input.hbs");
+        }, new HandlebarsTemplateEngine());
+        post("/herosform/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            int age = Integer.parseInt(request.queryParams("age"));
+            String power = request.queryParams("specialPower");
+            String weakness = request.queryParams("weakness");
+            Hero newMember = new Hero(name, age, power,weakness);
+            model.put("heros", Hero.getAll());
+            return new ModelAndView(model, "herosuccess.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }
