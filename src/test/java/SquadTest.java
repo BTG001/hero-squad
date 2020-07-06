@@ -53,4 +53,11 @@ public class SquadTest {
         Squad group2 = new Squad(7,"Justice League", "Safeguard People");
         assertEquals(2, Squad.getAll().size());
     }
+
+    @Test
+    public void findReturnsCorrectHeroWhenManyHeroExists() {
+        Squad group1 = new Squad(7,"Justice League", "Safeguard People");
+        Squad group2 = new Squad(7,"Justice League", "Safeguard People");
+        assertEquals(2, Squad.findById(group2.getId()).getId());
+    }
 }

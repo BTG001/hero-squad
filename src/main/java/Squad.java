@@ -31,6 +31,10 @@ public class Squad {
         return instances;
     }
 
+    public static Squad findById(int id) {
+        return instances.get(id-1);
+    }
+
     public int getSize() {
         return size;
     }
