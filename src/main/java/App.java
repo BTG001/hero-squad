@@ -26,7 +26,7 @@ public class App {
             model.put("squads", Squad.getAll());
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
-        get("/receivedsquad", (req, res) -> {
+        get("/receivedsquad", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
@@ -46,5 +46,12 @@ public class App {
             model.put("heros", Hero.getAll());
             return new ModelAndView(model, "herosuccess.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/receivedheroes", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Hero> heroes = Hero.getAll();
+            model.put("heroes", heroes);
+            return new ModelAndView(model, "displayheroes.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 }
