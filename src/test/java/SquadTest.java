@@ -1,15 +1,13 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class SquadTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
+public class SquadTest {
+    @Test
+    public void checkIfItInstantiatesProperly() {
+        Squad squad = new Squad(7,"Justice League", "Safeguard People");
+        assertEquals(true, squad instanceof Squad);
     }
 }
