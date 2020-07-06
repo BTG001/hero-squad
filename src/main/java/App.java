@@ -22,6 +22,8 @@ public class App {
             String cause = request.queryParams("cause");
             int size=Integer.parseInt(request.queryParams("size"));
             Squad newSquad = new Squad(size,name, cause);
-        });
+            model.put("squads", Squad.getAll());
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
