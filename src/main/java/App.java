@@ -7,6 +7,16 @@ import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
+        ProcessBuilder process = new ProcessBuilder();
+        Integer port;
+
+        if (process.environment().get("PORT") != null) {
+            port = Integer.parseInt(process.environment().get("PORT"));
+        } else {
+            port = 4567;
+        }
+
+        port(port);
         staticFileLocation("/public");
 
         get("/", (request, response) -> {
@@ -32,6 +42,7 @@ public class App {
             model.put("squads", squads);
             return new ModelAndView(model, "display.hbs");
         }, new HandlebarsTemplateEngine());
+
         get("/herosform/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "heroform-input.hbs");
@@ -53,5 +64,13 @@ public class App {
             return new ModelAndView(model, "displayheroes.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/success", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/herosdetails", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "display.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
