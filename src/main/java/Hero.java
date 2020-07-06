@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Queue;
 
 
@@ -22,6 +23,10 @@ public class Hero {
 
     public static void clear() {
         instances.clear();
+    }
+
+    public static ArrayList<Hero> getAll() {
+        return instances;
     }
 
     public String getName() {
