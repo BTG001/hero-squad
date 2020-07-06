@@ -28,4 +28,10 @@ public class HeroTest {
         Hero hero = new Hero("Shazam", 30, "Superhuman Strength", "Spell Casting Confusion");
         assertEquals("Superhuman Strength", hero.getSpecialPower());
     }
+
+    @Test
+    public void getsWeakness() {
+        Hero hero = new Hero("Shazam", 30, "Superhuman Strength", "Spell Casting Confusion");
+        assertEquals("Spell Casting Confusion", hero.getWeakness());
+    }
 }
