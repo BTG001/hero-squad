@@ -16,4 +16,10 @@ public class HeroTest {
         Hero hero = new Hero("Shazam", 30, "Superhuman Strength", "Spell Casting Confusion");
         assertEquals("Shazam", hero.getName());
     }
+
+    @Test
+    public void getsAgeInput() {
+        Hero hero = new Hero("Shazam", 30, "Superhuman Strength", "Spell Casting Confusion");
+        assertEquals(30, hero.getAge());
+    }
 }
