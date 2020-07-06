@@ -8,7 +8,7 @@ This app was authored by Bruno Towett
 
 ## Installation
 
-* Clone the repo: 
+* Clone the repo: `https://github.com/BTG001/hero-squad.git`
 * Run the command `gradle build`
 * Run the tests `gradle test`
 * Launch the app `gradle run`. The app will open on port 4567 on your browser: `localhost:4567`
