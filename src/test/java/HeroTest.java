@@ -53,4 +53,11 @@ public class HeroTest {
         assertEquals(true, Hero.getAll().contains(shazam));
         assertEquals(true, Hero.getAll().contains(blackpanther));
     }
+
+    @Test
+    public void allHerosAreCorrectlyreturned() {
+        Hero shazam = new Hero("Shazam", 30, "Superhuman Strength", "Spell Casting Confusion");
+        Hero blackpanther = new Hero("BlackPanther", 25, "Super agile", "Lack protection against magic");
+        assertEquals(2, Hero.getAll().size());
+    }
 }
