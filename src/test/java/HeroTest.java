@@ -34,4 +34,9 @@ public class HeroTest {
         Hero hero = new Hero("Shazam", 30, "Superhuman Strength", "Spell Casting Confusion");
         assertEquals("Spell Casting Confusion", hero.getWeakness());
     }
+
+    @After
+    public void tearDown() throws Exception {
+        Hero.clear();
+    }
 }
