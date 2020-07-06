@@ -16,4 +16,10 @@ public class SquadTest {
         Squad squad = new Squad(7,"Justice League", "Safeguard People");
         assertEquals(7, squad.getSize());
     }
+
+    @Test
+    public void getsSquadName() {
+        Squad squad = new Squad(7,"Justice League", "Safeguard People");
+        assertEquals("Justice League", squad.getSquadName());
+    }
 }
