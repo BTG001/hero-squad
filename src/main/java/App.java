@@ -16,5 +16,10 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "squadform.hbs");
         }, new HandlebarsTemplateEngine());
+        post("/squads/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            String name = request.queryParams("squadName");
+
+        });
     }
 }
