@@ -39,4 +39,10 @@ public class HeroTest {
     public void tearDown() throws Exception {
         Hero.clear();
     }
+
+    @Test
+    public void getsId() {
+        Hero hero = new Hero("Shazam", 30, "Superhuman Strength", "Spell Casting Confusion");
+        assertEquals(1, hero.getId());
+    }
 }
