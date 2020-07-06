@@ -32,4 +32,10 @@ public class SquadTest {
     public void tearDown() {
         Squad.clear();
     }
+
+    @Test
+    public void getsId() {
+        Squad squad = new Squad(7,"Justice League", "Safeguard People");
+        assertEquals(1, squad.getId());
+    }
 }

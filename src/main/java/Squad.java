@@ -7,6 +7,7 @@ public class Squad {
     private final String squadName;
     private final String cause;
     private static ArrayList<Squad> instances = new ArrayList<Squad>();
+    private final int id;
 
 
     public Squad(int size, String squadName, String cause) {
@@ -14,6 +15,7 @@ public class Squad {
         this.squadName = squadName;
         this.cause = cause;
         instances.add(this);
+        this.id = instances.size();
     }
 
     public static ArrayList<Squad> getInstances() {
@@ -34,5 +36,9 @@ public class Squad {
 
     public String getCause() {
         return cause;
+    }
+
+    public int getId() {
+        return id;
     }
 }
