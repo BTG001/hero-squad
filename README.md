@@ -1,6 +1,6 @@
 ## Hero-Squad
 
-his is an app that accredits users to assign a `Hero` to a `Squad`. It is developed using Spark and it uses RESTful routing of Spark to navigate through the disparate pages of the app.
+This is an app that accredits users to assign a `Hero` to a `Squad`. It is developed using Spark and it uses RESTful routing of Spark to navigate through the disparate pages of the app.
 
 ## Author 
 
