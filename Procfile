@@ -1,1 +1,0 @@
-web: ./build/install/hero-squad-btg/bin/hero-squad-btg
