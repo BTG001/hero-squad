@@ -18,6 +18,11 @@ This app was authored by Bruno Towett
 * Java.
 * Spark - the front end framework.
 * Bootstrap.
+* Heroku
+
+## Live Demo
+
+Here is a link to the live demo: 'https://hero-squad-btg.herokuapp.com/'
 
 ## Contact Information
 
