@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="SquadTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="SquadTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.7+10-post-Ubuntu-2ubuntu218.04"/>
@@ -61,7 +61,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="SquadTest" name="checkIfItInstantiatesProperly" time="0.004"/>
+  <testcase classname="SquadTest" name="checkIfItInstantiatesProperly" time="0.005"/>
   <testcase classname="SquadTest" name="findReturnsCorrectHeroWhenManyHeroExists" time="0"/>
   <testcase classname="SquadTest" name="getsId" time="0"/>
   <testcase classname="SquadTest" name="allSquadsContainSquads" time="0"/>

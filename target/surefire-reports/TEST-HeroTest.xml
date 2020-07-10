@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="HeroTest" time="0" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="HeroTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.7+10-post-Ubuntu-2ubuntu218.04"/>
@@ -63,7 +63,7 @@
   </properties>
   <testcase classname="HeroTest" name="checkIfItInstantiatesProperly" time="0"/>
   <testcase classname="HeroTest" name="getsId" time="0"/>
-  <testcase classname="HeroTest" name="allHerosAreCorrectlyreturned" time="0"/>
+  <testcase classname="HeroTest" name="allHerosAreCorrectlyreturned" time="0.001"/>
   <testcase classname="HeroTest" name="getsNameInput" time="0"/>
   <testcase classname="HeroTest" name="getsWeakness" time="0"/>
   <testcase classname="HeroTest" name="getsSpecialPower" time="0"/>

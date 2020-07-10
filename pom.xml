@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.moringa.herosquad</groupId>
-    <artifactId>hero-squad</artifactId>
+    <artifactId>Hero-squad</artifactId>
     <version>1.0</version>
 
     <dependencies>
@@ -13,7 +13,7 @@
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
-            <version>2.6.0</version>
+            <version>2.7.2</version>
         </dependency>
         <dependency>
             <groupId>com.sparkjava</groupId>
@@ -92,7 +92,7 @@
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
                     <!-- Change this to YOUR application name! -->
-                    <appName>hero-squad</appName>
+                    <appName>hero-squad-btg</appName>
                     <processTypes>
                         <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
                     </processTypes>
