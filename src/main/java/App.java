@@ -24,7 +24,11 @@ public class App {
             int age = Integer.parseInt(request.queryParams("age"));
             String power = request.queryParams("specialPower");
             String weakness = request.queryParams("weakness");
-            Hero newMember = new Hero(name, age, power,weakness);
+            try {
+                Hero newMember = new Hero(name, age, power,weakness);
+            } catch (IllegalArgumentException exception) {
+                System.out.println("Please enter all input fields.");
+            }
             model.put("heros", Hero.getAll());
             return new ModelAndView(model, "herosuccess.hbs");
         }, new HandlebarsTemplateEngine());
