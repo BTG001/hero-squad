@@ -12,6 +12,9 @@ public class Squad {
 
 
     public Squad(int size, String squadName, String cause) {
+        if (squadName.equals("") || cause.equals("")){
+            throw new IllegalArgumentException("Please enter all input fields.");
+        }
         this.size = size;
         this.squadName = squadName;
         this.cause = cause;
