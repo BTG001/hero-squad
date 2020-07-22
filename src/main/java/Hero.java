@@ -13,6 +13,9 @@ public class Hero {
 
 
     public Hero(String name, int age, String specialPower, String weakness) {
+        if (name.equals("") || specialPower.equals("") || weakness.equals("")){
+            throw new IllegalArgumentException("Please enter all input fields.");
+        }
         this.name = name;
         this.age = age;
         this.specialPower = specialPower;
