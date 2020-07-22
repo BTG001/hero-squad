@@ -45,7 +45,11 @@ public class App {
             String name = request.queryParams("squadName");
             String cause = request.queryParams("cause");
             int size=Integer.parseInt(request.queryParams("size"));
-            Squad newSquad = new Squad(size,name, cause);
+            try {
+                Squad newSquad = new Squad(size,name, cause);
+            } catch (IllegalArgumentException exception) {
+                System.out.println("Please enter all input fields.");
+            }
             model.put("squads", Squad.getAll());
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
